@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body style="text-align: left">
+<h1>Experimento de flexibilidad</h1>
+<h2>Identificación de columnas con Anapche NLP Natural Language Processing</h2>
+<h3>Ejemplo de carga de datos sin definir las columnas</h3>
+-------------------------------------------------
+<form method="POST" action="cargaArchivo" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td><input type="file" name="file" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+</form>
+-------------------------------------------------
+<br>
+<br>
+//// RESULTADOS ////
+<br>
+	
+	<h3>Nombres detectados:</h3> <br>
+	<ul th:each="dato : ${nombres}">
+	    <li th:text="${dato}"></li>
+	</ul>
+	<br>
+	<h3>Parrafos detectados:</h3><br>
+	<ul th:each="dato : ${parrafos}">
+	    <li th:text="${dato}"></li>
+	</ul>
+	<br>
+</body>
+</html>
